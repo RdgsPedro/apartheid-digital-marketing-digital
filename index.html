@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartheid Digital? | Inclusão Digital e Serviços Públicos no Brasil (2023-2025)</title>
+    <meta name="description"
+        content="Ter internet não basta para ter inclusão digital. Análise dos microdados da TIC Domicílios (2023 a 2025) sobre quem consegue resolver serviços públicos pela internet e a exclusão digital no Brasil.">
+    <meta name="keywords"
+        content="inclusão digital, o que é inclusão digital, exclusão digital no Brasil, apartheid digital, TIC Domicílios, governo digital">
+    <meta name="author" content="Pedro Rodrigues Almeida, Vitor Alexandre dos Santos Silva, Eduardo Pedro Nogueira">
+    <meta name="theme-color" content="#EB6834">
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Analytics (GA4) - Substitua G-XXXXXXXXXX pelo seu ID de medição -->
+    <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Ícones usados na página -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+        </symbol>
+        <symbol id="i-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="m8 12.5 2.8 2.8L16 9.8" />
+        </symbol>
+        <symbol id="i-zoom" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5M11 8v6M8 11h6" />
+        </symbol>
+        <symbol id="i-info" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 11v5M12 8h.01" />
+        </symbol>
+        <symbol id="i-ext" viewBox="0 0 24 24">
+            <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24">
+            <path d="m8 8-5 4 5 4M16 8l5 4-5 4M13.5 5l-3 14" />
+        </symbol>
+        <symbol id="i-db" viewBox="0 0 24 24">
+            <ellipse cx="12" cy="5.5" rx="8" ry="3" />
+            <path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2.5" />
+            <path d="m4 7 8 6 8-6" />
+        </symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24">
+            <rect x="9" y="9" width="11" height="11" rx="2" />
+            <path d="M5 15V5a1 1 0 0 1 1-1h10" />
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6 6 18" />
+        </symbol>
+    </svg>
+
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ======================= CABEÇALHO E MENU ======================= -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav">
+            <a href="#inicio" class="brand" aria-label="Apartheid Digital? — voltar ao início">
+                <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>Apartheid Digital<span class="q">?</span></span>
+            </a>
+            <nav aria-label="Navegação principal">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#a-pesquisa">A pesquisa</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#dados-e-fontes">Dados e fontes</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato" class="btn btn-sm">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- ======================= 1. INÍCIO (HERO) ======================= -->
+        <section id="inicio" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-in">
+                    <p class="eyebrow"><span class="tri" aria-hidden="true"><i></i><i></i><i></i></span>Apartheid
+                        Digital? · 2023 a 2025</p>
+                    <h1><span class="h1-kicker">Inclusão digital no Brasil:</span> quem consegue resolver serviços
+                        públicos <span class="hl">pela internet</span>?</h1>
+                    <p class="hero-lead">
+                        Ter internet não basta para ter inclusão digital. Com os microdados da TIC Domicílios, vemos
+                        quem resolve documentos, saúde, educação e impostos pela internet, e quem ainda precisa ir a
+                        um posto de atendimento.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#resultados" class="btn btn-primary">Ver os resultados <svg class="i"
+                                aria-hidden="true">
+                                <use href="#i-arrow" />
+                            </svg></a>
+                        <a href="#a-pesquisa" class="btn btn-ghost">Como a pesquisa foi feita</a>
+                    </div>
+                </div>
+
+                <!-- O achado principal, em pontos: cada ponto = 1 pessoa em 100 -->
+                <aside class="finding-card hero-in" style="--rd:.15s" aria-labelledby="achado-titulo">
+                    <div class="finding-head">
+                        <span class="pill">O achado principal</span>
+                        <span class="finding-year">Impostos · 2025</span>
+                    </div>
+                    <p id="achado-titulo" class="finding-title">Usuários de internet que resolveram ao menos um serviço
+                        de impostos pela internet, sem ir a um posto</p>
+                    <div class="compare">
+                        <div>
+                            <p class="num">46<small>em cada 100</small></p>
+                            <p class="who">Renda familiar acima de 5 salários mínimos</p>
+                            <div class="dots" data-value="46" aria-hidden="true"></div>
+                        </div>
+                        <div class="low">
+                            <p class="num">4,8<small>em cada 100</small></p>
+                            <p class="who">Renda familiar de até 1 salário mínimo</p>
+                            <div class="dots" data-value="4.8" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                    <div class="finding-foot">
+                        <span class="times">≈10×</span>
+                        <p>Quase 10 vezes mais. Quem tem menos renda tenta menos e, quando tenta, resolve menos.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Faixa com o projeto em números -->
+        <div class="stats-wrap">
+            <div class="container">
+                <ul class="stats reveal" aria-label="O projeto em números">
+                    <li class="stat" style="--c:var(--orange)"><strong class="stat-num">45.436</strong><span
+                            class="stat-label">usuários de internet com 16 anos ou mais</span></li>
+                    <li class="stat" style="--c:var(--blue)"><strong class="stat-num">3 anos</strong><span
+                            class="stat-label">edições 2023, 2024 e 2025 da TIC Domicílios</span></li>
+                    <li class="stat" style="--c:var(--green)"><strong class="stat-num">8 áreas</strong><span
+                            class="stat-label">de serviços públicos, de documentos a justiça</span></li>
+                    <li class="stat" style="--c:var(--orange)"><strong class="stat-num">4 dimensões</strong><span
+                            class="stat-label">renda, escolaridade, região e raça</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ======================= 2. A PESQUISA ======================= -->
+        <section id="a-pesquisa" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Metodologia e contexto</p>
+                    <h2>A pesquisa: inclusão digital e serviços públicos no Brasil</h2>
+                </header>
+
+                <div class="question-grid">
+                    <div class="question-card reveal">
+                        <p class="label">A pergunta</p>
+                        <p class="question">Existe diferença na capacidade de resolver serviços públicos pela internet
+                            entre grupos de <em>renda, escolaridade, região e raça</em>? E em quais dimensões ela é
+                            maior?</p>
+                        <p class="note">A pergunta fica aberta de propósito: por isso o nome do projeto termina com um
+                            ponto de interrogação.</p>
+                    </div>
+
+                    <div class="why-card reveal" style="--rd:.1s">
+                        <h3>Por que isso importa</h3>
+                        <p>Cada vez mais serviços públicos passam para a internet. Para quem consegue usar, isso
+                            economiza tempo e deslocamento; para quem não consegue, o risco é ficar sem o serviço. A Lei
+                            14.129/2021, do governo digital, garante o direito ao atendimento presencial.</p>
+                        <p>E o problema não termina no acesso: depois de conectada, a pessoa ainda depende de
+                            motivação, de habilidade e do que consegue fazer com a internet.</p>
+                        <p class="cite">van Dijk (2017); Hargittai (2002); van Deursen e Helsper (2015)</p>
+                    </div>
+                </div>
+
+                <div class="measure reveal">
+                    <div>
+                        <h3>O que foi medido</h3>
+                        <p class="muted">Para cada área, a pesquisa faz duas perguntas:</p>
+                        <div class="flow">
+                            <div class="flow-step">
+                                <span class="flow-icon"><svg class="i" aria-hidden="true">
+                                        <use href="#i-search" />
+                                    </svg></span>
+                                <strong>Tentou</strong>
+                                <p>Nos últimos 12 meses, usou a internet para procurar informações ou realizar serviços
+                                    públicos daquela área.</p>
+                            </div>
+                            <svg class="i flow-arrow" aria-hidden="true">
+                                <use href="#i-arrow" />
+                            </svg>
+                            <div class="flow-step solved">
+                                <span class="flow-icon"><svg class="i" aria-hidden="true">
+                                        <use href="#i-check" />
+                                    </svg></span>
+                                <strong>Resolveu</strong>
+                                <p>Entre quem tentou, realizou ao menos um serviço sem precisar ir até um posto de
+                                    atendimento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>As áreas analisadas</h3>
+                        <ul class="chips">
+                            <li class="chip">Documentos pessoais</li>
+                            <li class="chip">Saúde pública</li>
+                            <li class="chip">Educação pública</li>
+                            <li class="chip">Trabalho e previdência</li>
+                            <li class="chip">Impostos e taxas</li>
+                            <li class="chip">Polícia e segurança</li>
+                            <li class="chip">Transporte e serviços urbanos</li>
+                            <li class="chip">Justiça <small>só em 2025</small></li>
+                            <li class="chip alt">Finanças <small>para comparar</small></li>
+                        </ul>
+                        <details class="more">
+                            <summary>Ver exemplos do questionário de 2025</summary>
+                            <ul class="examples">
+                                <li><strong>Documentos pessoais:</strong> RG, CPF, CNH, passaporte, título de eleitor ou
+                                    carteira de trabalho</li>
+                                <li><strong>Saúde pública:</strong> agendamento de consultas, remédios, vacinas ou
+                                    outros serviços do SUS</li>
+                                <li><strong>Educação pública:</strong> Enem, Prouni, Sisu ou matrícula em escolas ou
+                                    universidades públicas</li>
+                                <li><strong>Trabalho e previdência:</strong> INSS, FGTS, seguro-desemprego,
+                                    auxílio-doença ou aposentadoria</li>
+                                <li><strong>Impostos e taxas:</strong> declaração de imposto de renda, IPVA ou IPTU</li>
+                                <li><strong>Polícia e segurança:</strong> boletim de ocorrência, antecedentes criminais
+                                    ou denúncias</li>
+                                <li><strong>Transporte e serviços urbanos:</strong> linhas e tarifas de ônibus, limpeza
+                                    e conservação de vias ou iluminação</li>
+                                <li><strong>Justiça (só em 2025):</strong> consulta de processos ou defensoria pública
+                                </li>
+                            </ul>
+                            <p class="finance-note"><strong>Finanças</strong> (transações financeiras pela internet nos
+                                últimos 3 meses) entra à parte, para comparar com um serviço que não é do governo.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="method">
+                    <h3 class="reveal">Como a análise foi feita</h3>
+                    <ol class="steps">
+                        <li class="step reveal">
+                            <span class="step-n">01</span>
+                            <h4>Peso amostral</h4>
+                            <p>Cada entrevistado representa muitas outras pessoas. Com o peso oficial da pesquisa, os
+                                números valem para o Brasil.</p>
+                        </li>
+                        <li class="step reveal" style="--rd:.08s">
+                            <span class="step-n">02</span>
+                            <h4>Percentuais por grupo</h4>
+                            <p>Para cada área, ano e grupo, o percentual que tentou e o percentual que resolveu.</p>
+                        </li>
+                        <li class="step reveal" style="--rd:.16s">
+                            <span class="step-n">03</span>
+                            <h4>Margem de erro</h4>
+                            <p>Calculada com as 200 réplicas que a própria TIC disponibiliza e conferida com as tabelas
+                                oficiais.</p>
+                        </li>
+                        <li class="step reveal" style="--rd:.24s">
+                            <span class="step-n">04</span>
+                            <h4>Teste das diferenças</h4>
+                            <p>Teste de Rao-Scott, feito para pesquisas por amostra, com a correção de Holm, mais
+                                rigorosa quando há muitos testes.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 3. RESULTADOS ======================= -->
+        <section id="resultados" class="section bg-soft">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Achados estatísticos</p>
+                    <h2>Resultados: inclusão digital nos serviços públicos, de 2023 a 2025</h2>
+                    <p class="lead">Existe diferença entre os grupos, mas ela é menor e menos certa do que um teste
+                        simples mostraria. Escolaridade e região são as diferenças mais firmes, e impostos é a área mais
+                        desigual.</p>
+                </header>
+
+                <!-- Dos 88 testes, quantos se confirmam -->
+                <div class="funnel reveal">
+                    <h3 class="funnel-title">Dos 88 testes feitos, quantos se sustentam?</h3>
+                    <div class="funnel-row" style="--c:#C5CEDB;--w:100%">
+                        <p class="funnel-label"><strong>88</strong><span>testes de diferença entre grupos</span></p>
+                        <div class="funnel-track">
+                            <div class="funnel-bar"></div>
+                        </div>
+                    </div>
+                    <div class="funnel-row" style="--c:var(--blue);--t:var(--blue-700);--w:94.3%;--d:.15s">
+                        <p class="funnel-label"><strong>83</strong><span>pareceriam diferenças reais num teste
+                                comum</span></p>
+                        <div class="funnel-track">
+                            <div class="funnel-bar"></div>
+                        </div>
+                    </div>
+                    <div class="funnel-row" style="--c:var(--orange);--t:var(--orange-600);--w:9.1%;--d:.3s">
+                        <p class="funnel-label"><strong>8</strong><span>se confirmam com os testes próprios para
+                                pesquisa por amostra</span></p>
+                        <div class="funnel-track">
+                            <div class="funnel-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Os achados, em abas -->
+                <div class="tabs reveal">
+                    <div class="tabs-list" role="tablist" aria-label="Achados da pesquisa">
+                        <button class="tab" role="tab" type="button" id="tab-1" aria-controls="painel-1"
+                            aria-selected="true"><span class="n">01</span>Tentar × resolver</button>
+                        <button class="tab" role="tab" type="button" id="tab-2" aria-controls="painel-2"
+                            aria-selected="false" tabindex="-1"><span class="n">02</span>Escolaridade e região</button>
+                        <button class="tab" role="tab" type="button" id="tab-3" aria-controls="painel-3"
+                            aria-selected="false" tabindex="-1"><span class="n">03</span>Impostos</button>
+                        <button class="tab" role="tab" type="button" id="tab-4" aria-controls="painel-4"
+                            aria-selected="false" tabindex="-1"><span class="n">04</span>Raça</button>
+                        <button class="tab" role="tab" type="button" id="tab-5" aria-controls="painel-5"
+                            aria-selected="false" tabindex="-1"><span class="n">05</span>Finanças</button>
+                    </div>
+
+                    <!-- Achado 1: Figura 1 -->
+                    <article class="panel is-active" id="painel-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+                        <div class="panel-grid">
+                            <div>
+                                <span class="pill">Saúde e impostos</span>
+                                <h3>Quem tenta e quem resolve</h3>
+                                <div class="big">
+                                    <div class="big-item"><span class="v">36,6%</span><span class="l">dos usuários
+                                            tentaram serviços de saúde, a área mais procurada</span></div>
+                                    <div class="big-item"><span class="v blue">22,6%</span><span class="l">de quem
+                                            tentou conseguiu resolver sem ir a um posto</span></div>
+                                </div>
+                                <p>Saúde é a área que mais gente tenta e a que menos se resolve. Em impostos acontece o
+                                    contrário: <strong>61,1%</strong> de quem tentou resolveu.</p>
+                                <p class="aside-note"><svg class="i" aria-hidden="true">
+                                        <use href="#i-info" />
+                                    </svg>
+                                    <span>Contando todos os usuários, cerca de 18 em cada 100 resolveram algo de
+                                        impostos pela internet, 12 resolveram algo de documentos e menos de 4, algo com
+                                        a polícia.</span>
+                                </p>
+                            </div>
+                            <div class="figs">
+                                <figure>
+                                    <!-- Substitua src="assets/figura1.png" pelo caminho do print da Figura 1 -->
+                                    <button class="fig-frame" type="button" aria-label="Ampliar a Figura 1"
+                                        data-empty="Figura 1 · adicione assets/figura1.png">
+                                        <img src="assets/figura1.png" loading="lazy"
+                                            onerror="this.parentNode.classList.add('is-empty')"
+                                            alt="Gráfico de barras com o percentual de usuários de internet que tentaram e que resolveram serviços públicos pela internet em cada área, no Brasil, em 2025.">
+                                        <span class="zoom" aria-hidden="true"><svg class="i">
+                                                <use href="#i-zoom" />
+                                            </svg></span>
+                                    </button>
+                                    <figcaption><strong>Figura 1.</strong> Quem tenta e quem resolve serviços públicos
+                                        pela internet, por área. Brasil, 2025. Fonte: elaboração própria com os
+                                        microdados da TIC Domicílios (Cetic.br/NIC.br).</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Achado 2: Figura 2 -->
+                    <article class="panel" id="painel-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0">
+                        <div class="panel-grid">
+                            <div>
+                                <span class="pill">Escolaridade e região</span>
+                                <h3>Escolaridade e região: as diferenças mais firmes</h3>
+                                <div class="big">
+                                    <div class="big-item"><span class="v">7 de 8</span><span class="l">diferenças
+                                            confirmadas são de escolaridade (4) ou de região (3)</span></div>
+                                    <div class="big-item"><span class="v blue">8 de 22</span><span class="l">comparações
+                                            em que Sudeste e Nordeste aparecem diferentes</span></div>
+                                </div>
+                                <p>Quase sempre o Sudeste fica à frente. Mas a região não é uma história simples: em
+                                    alguns anos, o Sul resolve mais que o Sudeste em polícia, educação, transporte e
+                                    saúde.</p>
+                                <p class="aside-note"><svg class="i" aria-hidden="true">
+                                        <use href="#i-info" />
+                                    </svg>
+                                    <span>O tamanho das diferenças, medido pelo V de Cramér, é pequeno nas quatro
+                                        dimensões, e a ordem entre elas é apertada. O ranking é uma tendência, não um
+                                        pódio.</span>
+                                </p>
+                            </div>
+                            <div class="figs">
+                                <figure>
+                                    <button class="fig-frame" type="button" aria-label="Ampliar a Figura 2"
+                                        data-empty="Figura 2 · adicione assets/figura2.png">
+                                        <img src="assets/figura2.png" loading="lazy"
+                                            onerror="this.parentNode.classList.add('is-empty')"
+                                            alt="Gráfico que compara o tamanho da diferença entre grupos de renda, escolaridade, região e raça na resolução de serviços públicos pela internet, de 2023 a 2025.">
+                                        <span class="zoom" aria-hidden="true"><svg class="i">
+                                                <use href="#i-zoom" />
+                                            </svg></span>
+                                    </button>
+                                    <figcaption><strong>Figura 2.</strong> Tamanho da diferença entre grupos (V de
+                                        Cramér) por dimensão: renda, escolaridade, região e raça. Brasil, 2023 a
+                                        2025.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Achado 3: Figuras 3 e 5 -->
+                    <article class="panel" id="painel-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0">
+                        <div class="panel-grid">
+                            <div>
+                                <span class="pill">A área mais desigual</span>
+                                <h3>Impostos: a área mais desigual</h3>
+                                <div class="big">
+                                    <div class="big-item"><span class="v">5 de 8</span><span class="l">diferenças
+                                            confirmadas são de impostos</span></div>
+                                    <div class="big-item"><span class="v blue">33,8 pts</span><span class="l">entre a
+                                            renda mais alta e a mais baixa, entre quem tentou (intervalo de confiança:
+                                            18,9 a 48,8)</span></div>
+                                </div>
+                                <p>A renda pesa duas vezes: quem ganha até 1 salário mínimo tenta menos e, quando tenta,
+                                    resolve menos.</p>
+                                <table class="mini-table">
+                                    <caption class="sr-only">A dupla barreira da renda em impostos, Brasil, 2025
+                                    </caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">2025</th>
+                                            <th scope="col">Até 1 SM</th>
+                                            <th scope="col">Mais de 5 SM</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Tentou</th>
+                                            <td>12,0%</td>
+                                            <td>62,6%</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Resolveu, entre quem tentou</th>
+                                            <td>39,7%</td>
+                                            <td>73,5%</td>
+                                        </tr>
+                                        <tr class="total">
+                                            <th scope="row">No total</th>
+                                            <td>4,8 em 100</td>
+                                            <td>46,0 em 100</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="figs">
+                                <figure>
+                                    <button class="fig-frame" type="button" aria-label="Ampliar a Figura 3"
+                                        data-empty="Figura 3 · adicione assets/figura3.png">
+                                        <img src="assets/figura3.png" loading="lazy"
+                                            onerror="this.parentNode.classList.add('is-empty')"
+                                            alt="Gráfico com a diferença entre os grupos de maior e menor renda e de maior e menor escolaridade na resolução de serviços públicos pela internet, por área, em 2025, com intervalos de confiança.">
+                                        <span class="zoom" aria-hidden="true"><svg class="i">
+                                                <use href="#i-zoom" />
+                                            </svg></span>
+                                    </button>
+                                    <figcaption><strong>Figura 3.</strong> Diferença, em pontos percentuais, entre a
+                                        renda mais alta e a mais baixa e entre escolaridade superior e até o
+                                        fundamental, em cada área. Brasil, 2025.</figcaption>
+                                </figure>
+                                <figure>
+                                    <button class="fig-frame" type="button" aria-label="Ampliar a Figura 5"
+                                        data-empty="Figura 5 · adicione assets/figura5.png">
+                                        <img src="assets/figura5.png" loading="lazy"
+                                            onerror="this.parentNode.classList.add('is-empty')"
+                                            alt="Gráfico com o percentual que tentou e que resolveu serviços de impostos pela internet em 2025, por faixa de renda familiar.">
+                                        <span class="zoom" aria-hidden="true"><svg class="i">
+                                                <use href="#i-zoom" />
+                                            </svg></span>
+                                    </button>
+                                    <figcaption><strong>Figura 5.</strong> A dupla barreira da renda em impostos: quem
+                                        tenta, quem resolve e o total, por faixa de renda. Brasil, 2025.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Achado 4: Figura 4 -->
+                    <article class="panel" id="painel-4" role="tabpanel" aria-labelledby="tab-4" tabindex="0">
+                        <div class="panel-grid">
+                            <div>
+                                <span class="pill">Raça</span>
+                                <h3>Raça: diferenças que os dados não confirmam</h3>
+                                <div class="big">
+                                    <div class="big-item"><span class="v">7 de 22</span><span class="l">comparações em
+                                            que pessoas brancas e pardas aparecem diferentes (brancas e pretas:
+                                            2)</span>
+                                    </div>
+                                    <div class="big-item"><span class="v blue">0</span><span class="l">testes de raça
+                                            se confirmaram no teste final</span></div>
+                                </div>
+                                <p>Isso não prova que não há diferença: mostra que a amostra não basta para afirmar com
+                                    segurança.</p>
+                                <p class="aside-note"><svg class="i" aria-hidden="true">
+                                        <use href="#i-info" />
+                                    </svg>
+                                    <span>Em 2025, a pesquisa deixou de fora do cadastro setores de agrupamentos
+                                        indígenas e quilombolas, o que pesa nessa comparação.</span>
+                                </p>
+                            </div>
+                            <div class="figs">
+                                <figure>
+                                    <button class="fig-frame" type="button" aria-label="Ampliar a Figura 4"
+                                        data-empty="Figura 4 · adicione assets/figura4.png">
+                                        <img src="assets/figura4.png" loading="lazy"
+                                            onerror="this.parentNode.classList.add('is-empty')"
+                                            alt="Gráfico com a diferença entre grupos de raça e entre regiões na resolução de serviços públicos pela internet, por área, em 2025, com intervalos de confiança.">
+                                        <span class="zoom" aria-hidden="true"><svg class="i">
+                                                <use href="#i-zoom" />
+                                            </svg></span>
+                                    </button>
+                                    <figcaption><strong>Figura 4.</strong> Diferença entre pessoas brancas e pardas e
+                                        entre Sudeste e Nordeste, em cada área. Brasil, 2025.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Achado 5: Figura 6 -->
+                    <article class="panel" id="painel-5" role="tabpanel" aria-labelledby="tab-5" tabindex="0">
+                        <div class="panel-grid">
+                            <div>
+                                <span class="pill">Fora do governo</span>
+                                <h3>Finanças: o mesmo desenho fora do governo</h3>
+                                <div class="big">
+                                    <div class="big-item"><span class="v">54,8 pts</span><span class="l">entre ensino
+                                            superior e até o fundamental, a maior diferença do projeto (intervalo de
+                                            confiança: 50,3 a 59,2)</span></div>
+                                    <div class="big-item"><span class="v green">63,1%</span><span class="l">dos usuários
+                                            fizeram transações financeiras pela internet em 2025</span></div>
+                                </div>
+                                <p>Entre brancos, pretos e pardos, a diferença fica em pouco mais de 2 pontos e não é
+                                    real. Como o mesmo desenho aparece num serviço privado, a desigualdade não é só do
+                                    governo digital.</p>
+                                <p class="aside-note"><svg class="i" aria-hidden="true">
+                                        <use href="#i-info" />
+                                    </svg>
+                                    <span>A pergunta de finanças olha os últimos 3 meses; a dos serviços públicos, os
+                                        últimos 12.</span>
+                                </p>
+                            </div>
+                            <div class="figs">
+                                <figure>
+                                    <button class="fig-frame" type="button" aria-label="Ampliar a Figura 6"
+                                        data-empty="Figura 6 · adicione assets/figura6.png">
+                                        <img src="assets/figura6.png" loading="lazy"
+                                            onerror="this.parentNode.classList.add('is-empty')"
+                                            alt="Gráfico comparando o percentual de usuários que fizeram transações financeiras pela internet com o percentual que tentou serviços públicos, em 2025.">
+                                        <span class="zoom" aria-hidden="true"><svg class="i">
+                                                <use href="#i-zoom" />
+                                            </svg></span>
+                                    </button>
+                                    <figcaption><strong>Figura 6.</strong> Finanças ao lado dos serviços públicos:
+                                        percentual de usuários por área. Brasil, 2025.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Explicação sobre diferença real -->
+                <div class="real reveal">
+                    <span class="real-icon"><svg class="i" aria-hidden="true">
+                            <use href="#i-info" />
+                        </svg></span>
+                    <div>
+                        <h3>O que é uma "diferença real"?</h3>
+                        <p>Toda pesquisa por amostra tem margem de erro. Uma diferença só é chamada de real quando o
+                            intervalo de confiança dela não passa pelo zero, ou seja, quando a margem de erro não apaga
+                            a diferença.</p>
+                        <ul class="legend" aria-label="Legenda dos gráficos">
+                            <li style="--c:var(--blue)">Diferença real</li>
+                            <li style="--c:#A0AEC0">Não dá para afirmar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 4. FAQ ======================= -->
+        <section id="faq" class="section">
+            <div class="container faq-grid">
+                <header class="faq-intro reveal">
+                    <p class="kicker">Perguntas frequentes</p>
+                    <h2>Perguntas frequentes sobre inclusão e exclusão digital</h2>
+                    <p class="lead">Respostas curtas para as dúvidas mais comuns, com os números do projeto quando eles
+                        ajudam.</p>
+                    <a href="#contato" class="btn btn-ghost">Ficou alguma dúvida? Fale com a equipe</a>
+                </header>
+
+                <div class="faq-list reveal" style="--rd:.1s">
+                    <details class="faq" name="faq" open>
+                        <summary>
+                            <h3>O que é inclusão digital?</h3><span class="plus" aria-hidden="true"></span>
+                        </summary>
+                        <p class="answer">Inclusão digital é ter acesso à internet e também conseguir usá-la para o que
+                            a pessoa precisa, como estudar, trabalhar, cuidar da saúde ou resolver documentos. Os
+                            estudos mostram que o acesso é só o começo: depois pesam a motivação e as habilidades de
+                            cada
+                            um (van Dijk, 2017). Este projeto olha a ponta final: quem consegue resolver um serviço
+                            público pela internet.</p>
+                    </details>
+
+                    <details class="faq" name="faq">
+                        <summary>
+                            <h3>O que é exclusão digital?</h3><span class="plus" aria-hidden="true"></span>
+                        </summary>
+                        <p class="answer">É a distância entre pessoas, famílias, empresas e regiões de níveis
+                            socioeconômicos diferentes, tanto nas oportunidades de acessar as tecnologias de informação
+                            e
+                            comunicação quanto no uso da internet para atividades variadas (OECD, 2001). Também é
+                            chamada de desigualdade digital.</p>
+                    </details>
+
+                    <details class="faq" name="faq">
+                        <summary>
+                            <h3>Como a inclusão digital aparece na educação?</h3><span class="plus"
+                                aria-hidden="true"></span>
+                        </summary>
+                        <p class="answer">Na educação, inclusão digital também é conseguir fazer pela internet a
+                            inscrição no Enem, no Prouni ou no Sisu, ou a matrícula numa escola ou universidade pública.
+                            Em 2025, 18,5% dos usuários tentaram esses serviços pela internet, e 36,7% de quem tentou
+                            resolveu sem ir a um posto. A diferença entre as regiões em educação foi uma das 8 que se
+                            confirmaram, em 2025.</p>
+                    </details>
+
+                    <details class="faq" name="faq">
+                        <summary>
+                            <h3>O que é inclusão digital rural?</h3><span class="plus" aria-hidden="true"></span>
+                        </summary>
+                        <p class="answer">É a inclusão digital pensada para quem mora no campo, onde o acesso à internet
+                            costuma ser menor que na cidade. Este projeto não separa zona rural e urbana, mas mostra
+                            diferenças entre as regiões do país. A própria TIC Domicílios publica indicadores separados
+                            por área urbana e rural.</p>
+                    </details>
+
+                    <details class="faq" name="faq">
+                        <summary>
+                            <h3>Dá para resolver direitos do trabalho e da previdência pela internet?</h3><span
+                                class="plus" aria-hidden="true"></span>
+                        </summary>
+                        <p class="answer">Dá, e muita gente tenta: em 2025, 29,2% dos usuários procuraram pela internet
+                            serviços como INSS, FGTS, seguro-desemprego ou aposentadoria. Mas só 37,7% de quem tentou
+                            conseguiu resolver sem ir a um posto. A maioria precisou ir a um posto para terminar ou só
+                            encontrou informações.</p>
+                    </details>
+
+                    <details class="faq" name="faq">
+                        <summary>
+                            <h3>Como a inclusão digital pode ajudar a reduzir as desigualdades sociais?</h3><span
+                                class="plus" aria-hidden="true"></span>
+                        </summary>
+                        <p class="answer">A desigualdade digital costuma seguir a social: quem tem menos renda e menos
+                            escolaridade usa menos os serviços de governo pela internet (Barbosa et al., 2022). Por
+                            isso,
+                            levar serviços para a internet sem apoio pode aumentar a distância, como mostram os
+                            resultados deste projeto em impostos. Ensinar a usar os serviços e manter o atendimento
+                            presencial, como prevê a Lei 14.129/2021, ajuda a não deixar ninguém para trás.</p>
+                    </details>
+
+                    <details class="faq" name="faq">
+                        <summary>
+                            <h3>Onde encontrar dados sobre exclusão digital no Brasil?</h3><span class="plus"
+                                aria-hidden="true"></span>
+                        </summary>
+                        <p class="answer">A principal fonte é a TIC Domicílios, do Cetic.br, que sai todo ano e tem os
+                            microdados abertos no site do Cetic.br. O IBGE também pergunta sobre acesso à internet na
+                            PNAD Contínua. Este projeto usou os microdados da TIC Domicílios de 2023 a 2025.</p>
+                    </details>
+
+                    <!-- Referências da seção -->
+                    <details class="fold refs">
+                        <summary>Referências bibliográficas<span class="plus" aria-hidden="true"></span></summary>
+                        <ul>
+                            <li>BARBOSA, Alexandre F. (coord.). <em>Pesquisa sobre o uso das tecnologias de informação
+                                    e comunicação nos domicílios brasileiros: TIC Domicílios</em>. São Paulo: Comitê
+                                Gestor da Internet no Brasil (CGI.br), 2022.</li>
+                            <li>BRASIL. <em>Lei nº 14.129, de 29 de março de 2021</em>. Dispõe sobre princípios, regras
+                                e instrumentos para o Governo Digital e para o aumento da eficiência pública. Brasília,
+                                DF: Presidência da República, 2021.</li>
+                            <li>HARGITTAI, Eszter. Second-level digital divide: differences in people's online skills.
+                                <em>First Monday</em>, v. 7, n. 4, 2002.
+                            </li>
+                            <li>OECD. <em>Understanding the Digital Divide</em>. Paris: OECD Publishing, 2001.</li>
+                            <li>VAN DEURSEN, Alexander J. A. M.; HELSPER, Ellen J. The third-level digital divide: who
+                                benefits most from being online? <em>Communication and Information Technologies
+                                    Annual</em>, v. 10, p. 29-52, 2015.</li>
+                            <li>VAN DIJK, Jan A. G. M. Digital divide: impact of access. In: RÖSSLER, Patrick (ed.).
+                                <em>The International Encyclopedia of Media Effects</em>. Chichester: John Wiley &amp;
+                                Sons, 2017. p. 1-11.
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 5. DADOS E FONTES ======================= -->
+        <section id="dados-e-fontes" class="section bg-soft">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Transparência e reprodutibilidade</p>
+                    <h2>Dados e fontes: a TIC Domicílios e o caminho dos números</h2>
+                    <p class="lead">Todos os números do site vêm dos microdados da TIC Domicílios, pesquisa de
+                        referência sobre o uso de internet e a exclusão digital no Brasil, feita pelo Cetic.br, do
+                        NIC.br. Todo o tratamento está aberto no GitHub.</p>
+                </header>
+
+                <div class="data-grid">
+                    <article class="card reveal">
+                        <span class="icon-badge"><svg class="i" aria-hidden="true">
+                                <use href="#i-db" />
+                            </svg></span>
+                        <h3>A pesquisa TIC Domicílios</h3>
+                        <p class="muted">Feita todo ano pelo Cetic.br (Centro Regional de Estudos para o
+                            Desenvolvimento da Sociedade da Informação), ligado ao NIC.br e ao CGI.br, com entrevistas
+                            presenciais, em tablet, em domicílios de todo o país.</p>
+                        <p class="mini-stats-title">Entrevistados em cada edição</p>
+                        <div class="mini-stats">
+                            <div><strong>21.271</strong><span>2023</span></div>
+                            <div><strong>21.170</strong><span>2024</span></div>
+                            <div><strong>24.535</strong><span>2025</span></div>
+                        </div>
+                        <ul class="ticks">
+                            <li><span><strong>45.436</strong> são usuários de internet com 16 anos ou mais, o público
+                                    das perguntas sobre serviços públicos.</span></li>
+                            <li><span>Em 2025, a amostra foi refeita com base no Censo 2022.</span></li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://cetic.br/pt/pesquisa/domicilios/microdados/" target="_blank" rel="noopener"
+                                class="btn btn-primary">Microdados no Cetic.br <svg class="i" aria-hidden="true">
+                                    <use href="#i-ext" />
+                                </svg></a>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" style="--rd:.1s">
+                        <span class="icon-badge" style="--bg-i:var(--blue-50);--fg-i:var(--blue-700)"><svg class="i"
+                                aria-hidden="true">
+                                <use href="#i-code" />
+                            </svg></span>
+                        <h3>O que o grupo fez com os dados</h3>
+                        <ol class="pipeline">
+                            <li><span class="n">1</span>
+                                <div><strong>Preparação</strong><span>Deixou os 3 anos com os mesmos nomes e códigos e
+                                        juntou tudo numa base só.</span></div>
+                            </li>
+                            <li><span class="n">2</span>
+                                <div><strong>Exploração</strong><span>Contou as pessoas de cada grupo e comparou os
+                                        percentuais com e sem peso.</span></div>
+                            </li>
+                            <li><span class="n">3</span>
+                                <div><strong>Análise</strong><span>Calculou a margem de erro e fez os testes de
+                                        diferença entre os grupos.</span></div>
+                            </li>
+                        </ol>
+                        <p class="muted small">O código é em Python, os números foram conferidos com as tabelas oficiais
+                            do Cetic.br e as figuras foram feitas no Power BI.</p>
+                        <div class="card-actions">
+                            <a href="https://github.com/RdgsPedro/apartheid-digital" target="_blank" rel="noopener"
+                                class="btn btn-blue">Ver o código no GitHub <svg class="i" aria-hidden="true">
+                                    <use href="#i-ext" />
+                                </svg></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="fold-grid">
+                    <details class="fold reveal">
+                        <summary><span><span class="fold-title">Limitações</span><small>5 cuidados ao ler os
+                                    números</small></span><span class="plus" aria-hidden="true"></span></summary>
+                        <div class="fold-body">
+                            <ul class="ticks">
+                                <li><span>Toda estimativa tem margem de erro, e os grupos pequenos têm margem
+                                        maior.</span></li>
+                                <li><span>Em 2025, o texto de 4 itens mudou: documentos ganhou CNH e título de
+                                        eleitor; saúde, vacinas e outros serviços do SUS; educação, o Sisu; e
+                                        transporte, linhas e tarifas de ônibus. Comparar 2025 com os anos anteriores
+                                        pede cuidado.</span></li>
+                                <li><span>O cadastro de 2025 deixou de fora 7.805 setores de agrupamentos indígenas e
+                                        5.591 de quilombolas, o que pesa na comparação por raça.</span></li>
+                                <li><span>A pergunta mede se a pessoa resolveu <strong>ao menos um</strong> serviço da
+                                        área sem ir a um posto, e não todos os serviços.</span></li>
+                                <li><span>A pergunta de finanças olha os últimos 3 meses; a dos serviços públicos, os
+                                        últimos 12.</span></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="fold reveal" style="--rd:.1s">
+                        <summary><span><span class="fold-title">Como citar</span><small>A base de dados e este
+                                    projeto</small></span><span class="plus" aria-hidden="true"></span></summary>
+                        <div class="fold-body">
+                            <div class="citation">
+                                <p class="cite-label">A base</p>
+                                <p id="cite-base">COMITÊ GESTOR DA INTERNET NO BRASIL (CGI.br). <em>Pesquisa sobre o
+                                        uso das tecnologias de informação e comunicação nos domicílios brasileiros: TIC
+                                        Domicílios 2023, 2024 e 2025</em> [Microdados]. São Paulo: CETIC.br/NIC.br,
+                                    2023–2025. Disponível em: https://cetic.br/pt/pesquisa/domicilios/microdados/.</p>
+                                <button class="copy" type="button" data-copy="cite-base"><svg class="i"
+                                        aria-hidden="true">
+                                        <use href="#i-copy" />
+                                    </svg><span>Copiar
+                                        referência</span></button>
+                            </div>
+                            <div class="citation">
+                                <p class="cite-label">Este projeto</p>
+                                <p id="cite-projeto">ALMEIDA, Pedro Rodrigues; SILVA, Vitor Alexandre dos Santos;
+                                    NOGUEIRA, Eduardo Pedro. <em>Apartheid Digital? Uma análise da desigualdade no uso
+                                        funcional da internet no Brasil (2023-2025)</em>. Projeto Integrador (Ciência de
+                                    Dados), Fatec Rubens Lara, Santos, 2026. Disponível em: [inserir URL final do
+                                    site].</p>
+                                <button class="copy" type="button" data-copy="cite-projeto"><svg class="i"
+                                        aria-hidden="true">
+                                        <use href="#i-copy" />
+                                    </svg><span>Copiar
+                                        referência</span></button>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 6. SOBRE O PROJETO ======================= -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Fatec Rubens Lara</p>
+                    <h2>Sobre o projeto Apartheid Digital?</h2>
+                    <p class="lead">Projeto Integrador do 2º semestre do curso de Ciência de Dados da Fatec Rubens
+                        Lara, feito em 2026. Ele junta pesquisa, programação e estatística para estudar a inclusão
+                        digital nos serviços públicos brasileiros.</p>
+                </header>
+
+                <div class="about-grid">
+                    <div>
+                        <h3 class="sr-only">A equipe</h3>
+                        <div class="team">
+                            <div class="member reveal">
+                                <span class="avatar" style="--bg-a:var(--orange-100);--fg-a:var(--orange-600)"
+                                    aria-hidden="true">PA</span>
+                                <h4>Pedro Rodrigues Almeida</h4>
+                                <p>Ciência de Dados — Fatec Rubens Lara</p>
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <svg
+                                        class="i" aria-hidden="true">
+                                        <use href="#i-ext" />
+                                    </svg></a>
+                            </div>
+                            <div class="member reveal" style="--rd:.08s">
+                                <span class="avatar" style="--bg-a:var(--blue-50);--fg-a:var(--blue-700)"
+                                    aria-hidden="true">VS</span>
+                                <h4>Vitor Alexandre dos Santos Silva</h4>
+                                <p>Ciência de Dados — Fatec Rubens Lara</p>
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <svg
+                                        class="i" aria-hidden="true">
+                                        <use href="#i-ext" />
+                                    </svg></a>
+                            </div>
+                            <div class="member reveal" style="--rd:.16s">
+                                <span class="avatar" style="--bg-a:var(--green-50);--fg-a:var(--green-700)"
+                                    aria-hidden="true">EN</span>
+                                <h4>Eduardo Pedro Nogueira</h4>
+                                <p>Ciência de Dados — Fatec Rubens Lara</p>
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <svg
+                                        class="i" aria-hidden="true">
+                                        <use href="#i-ext" />
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="side-card reveal" style="--rd:.2s">
+                        <div>
+                            <h3>Orientação</h3>
+                            <p>[Nome do professor ou da professora]</p>
+                        </div>
+                        <div>
+                            <h3>Ferramentas usadas</h3>
+                            <ul class="tools">
+                                <li>Python</li>
+                                <li>pandas</li>
+                                <li>Power BI</li>
+                                <li>GitHub</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>O artigo e a apresentação</h3>
+                            <div class="btns">
+                                <a href="#" class="btn btn-primary btn-sm">Artigo (PDF)</a>
+                                <a href="#" class="btn btn-light btn-sm">Slides</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 7. CONTATO ======================= -->
+        <section id="contato" class="section" style="padding-top: 24px;">
+            <div class="container">
+                <div class="contact reveal">
+                    <div>
+                        <p class="kicker">Fale conosco</p>
+                        <h2>Fale com a equipe</h2>
+                        <p class="lead">Quer usar os dados, citar o projeto ou conversar sobre inclusão digital? Mande
+                            uma mensagem pelo formulário ou pelo e-mail do grupo.</p>
+                        <ul class="contact-links">
+                            <li><a href="mailto:contato@exemplo.com"><span class="ico"><svg class="i"
+                                            aria-hidden="true">
+                                            <use href="#i-mail" />
+                                        </svg></span><span><small>E-mail do
+                                            grupo</small>[e-mail do grupo]</span></a></li>
+                            <li><a href="https://github.com/RdgsPedro/apartheid-digital" target="_blank"
+                                    rel="noopener"><span class="ico"><svg class="i" aria-hidden="true">
+                                            <use href="#i-code" />
+                                        </svg></span><span><small>Código no
+                                            GitHub</small>RdgsPedro/apartheid-digital</span></a></li>
+                        </ul>
+                    </div>
+
+                    <form class="form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo"
+                                    autocomplete="name" required>
+                            </div>
+                            <div class="field">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com"
+                                    autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <!-- As 4 personas do doc de SEO + Outro -->
+                        <div class="field">
+                            <label for="perfil">Perfil</label>
+                            <select id="perfil" name="perfil" required>
+                                <option value="" disabled selected>Selecione seu perfil...</option>
+                                <option value="estudante">Estudante</option>
+                                <option value="pesquisa">Pesquisa</option>
+                                <option value="gestao_publica">Gestão pública</option>
+                                <option value="imprensa">Imprensa</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar mensagem <svg class="i" aria-hidden="true">
+                                <use href="#i-arrow" />
+                            </svg></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= RODAPÉ ======================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="#inicio" class="brand">
+                        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <span>Apartheid Digital<span class="q">?</span></span>
+                    </a>
+                    <p>Uma análise da desigualdade no uso funcional da internet no Brasil (2023 a 2025).</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#a-pesquisa">A pesquisa</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#dados-e-fontes">Dados e fontes</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p><strong>Projeto Integrador — Ciência de Dados — Fatec Rubens Lara — 2026</strong></p>
+                <p>Dados: TIC Domicílios (Cetic.br/NIC.br)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Janela para ver as figuras ampliadas -->
+    <dialog class="lightbox" id="lightbox" aria-label="Figura ampliada">
+        <button class="lb-close" type="button" aria-label="Fechar"><svg class="i" aria-hidden="true">
+                <use href="#i-close" />
+            </svg></button>
+        <img src="" alt="">
+        <p></p>
+    </dialog>
+
+    <!-- Scripts leves: menu, animações, abas, figuras e citação -->
+    <script>
+        (function () {
+            try {
+                const header = document.getElementById('siteHeader');
+                const toggle = document.getElementById('menuToggle');
+                const navLinks = document.getElementById('navLinks');
+
+                /* Menu no celular */
+                const closeMenu = () => {
+                    navLinks.classList.remove('is-open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                };
+                toggle.addEventListener('click', () => {
+                    const open = navLinks.classList.toggle('is-open');
+                    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+                navLinks.addEventListener('click', (e) => {if (e.target.closest('a')) closeMenu();});
+                document.addEventListener('keydown', (e) => {if (e.key === 'Escape') closeMenu();});
+
+                /* Sombra no cabeçalho ao rolar */
+                const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+                onScroll();
+                window.addEventListener('scroll', onScroll, {passive: true});
+
+                /* Grades de 100 pontos do achado principal */
+                document.querySelectorAll('.dots').forEach((grid) => {
+                    const value = parseFloat(grid.dataset.value);
+                    const full = Math.floor(value);
+                    const part = value - full;
+                    let html = '';
+                    for (let i = 0; i < 100; i++) {
+                        let cls = '';
+                        let style = '--d:' + (i * 14) + 'ms';
+                        if (i < full) cls = 'on';
+                        else if (i === full && part > 0) {
+                            cls = 'part';
+                            style += ';--p:' + Math.round(part * 100) + '%';
+                        }
+                        html += '<i class="' + cls + '" style="' + style + '"></i>';
+                    }
+                    grid.innerHTML = html;
+                });
+
+                /* Animação de entrada ao rolar */
+                const revealEls = document.querySelectorAll('.reveal, .dots, .funnel');
+                if ('IntersectionObserver' in window) {
+                    const io = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('is-visible');
+                                io.unobserve(entry.target);
+                            }
+                        });
+                    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+                    revealEls.forEach((el) => io.observe(el));
+
+                    /* Destaca no menu a seção que está na tela */
+                    const links = {};
+                    navLinks.querySelectorAll('a[href^="#"]').forEach((a) => {links[a.getAttribute('href').slice(1)] = a;});
+                    const spy = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+                            Object.values(links).forEach((a) => a.classList.remove('is-active'));
+                            const link = links[entry.target.id];
+                            if (link && !link.classList.contains('btn')) link.classList.add('is-active');
+                        });
+                    }, {rootMargin: '-45% 0px -50% 0px'});
+                    document.querySelectorAll('main section[id]').forEach((s) => spy.observe(s));
+                } else {
+                    revealEls.forEach((el) => el.classList.add('is-visible'));
+                }
+
+                /* Abas dos resultados */
+                const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+                const panels = tabs.map((t) => document.getElementById(t.getAttribute('aria-controls')));
+                const selectTab = (index, focus) => {
+                    tabs.forEach((tab, j) => {
+                        const on = j === index;
+                        tab.setAttribute('aria-selected', on ? 'true' : 'false');
+                        tab.tabIndex = on ? 0 : -1;
+                        panels[j].classList.toggle('is-active', on);
+                        panels[j].hidden = !on;
+                    });
+                    if (focus) tabs[index].focus();
+                    tabs[index].scrollIntoView({block: 'nearest', inline: 'nearest'});
+                };
+                panels.forEach((p, j) => {p.hidden = j !== 0;});
+                tabs.forEach((tab, i) => {
+                    tab.addEventListener('click', () => selectTab(i, false));
+                    tab.addEventListener('keydown', (e) => {
+                        let next = null;
+                        if (e.key === 'ArrowRight') next = (i + 1) % tabs.length;
+                        if (e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+                        if (e.key === 'Home') next = 0;
+                        if (e.key === 'End') next = tabs.length - 1;
+                        if (next !== null) {e.preventDefault(); selectTab(next, true);}
+                    });
+                });
+
+                /* Figuras ampliadas */
+                const lightbox = document.getElementById('lightbox');
+                const lbImg = lightbox.querySelector('img');
+                const lbCaption = lightbox.querySelector('p');
+                document.querySelectorAll('.fig-frame').forEach((frame) => {
+                    frame.addEventListener('click', () => {
+                        if (frame.classList.contains('is-empty') || typeof lightbox.showModal !== 'function') return;
+                        const img = frame.querySelector('img');
+                        lbImg.src = img.currentSrc || img.src;
+                        lbImg.alt = img.alt;
+                        const caption = frame.closest('figure').querySelector('figcaption');
+                        lbCaption.textContent = caption ? caption.textContent.replace(/\s+/g, ' ').trim() : '';
+                        lightbox.showModal();
+                    });
+                });
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox || e.target.closest('.lb-close')) lightbox.close();
+                });
+
+                /* Copiar referência */
+                document.querySelectorAll('[data-copy]').forEach((btn) => {
+                    const label = btn.querySelector('span');
+                    btn.addEventListener('click', async () => {
+                        const text = document.getElementById(btn.dataset.copy).textContent.replace(/\s+/g, ' ').trim();
+                        try {
+                            await navigator.clipboard.writeText(text);
+                            label.textContent = 'Copiado!';
+                        } catch (err) {
+                            label.textContent = 'Selecione o texto para copiar';
+                        }
+                        setTimeout(() => {label.textContent = 'Copiar referência';}, 2200);
+                    });
+                });
+            } catch (err) {
+                /* Se algo falhar, mostra a página sem animações */
+                document.documentElement.classList.remove('js');
+            }
+        })();
+    </script>
+</body>
+
+</html>
