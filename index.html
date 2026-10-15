@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apartheid Digital? | Inclusão Digital e Serviços Públicos no Brasil (2023-2025)</title>
+    <title>Inclusão Digital no Brasil: Apartheid Digital? (2023-2025)</title>
     <meta name="description"
-        content="Ter internet não basta para ter inclusão digital. Análise dos microdados da TIC Domicílios (2023 a 2025) sobre quem consegue resolver serviços públicos pela internet e a exclusão digital no Brasil.">
+        content="Inclusão digital no Brasil: veja quem resolve serviços públicos pela internet e quem fica de fora. Explore os dados da TIC Domicílios.">
     <meta name="keywords"
         content="inclusão digital, o que é inclusão digital, exclusão digital no Brasil, apartheid digital, TIC Domicílios, governo digital">
     <meta name="author" content="Pedro Rodrigues Almeida, Vitor Alexandre dos Santos Silva, Eduardo Pedro Nogueira">
@@ -112,8 +112,8 @@
                 <div class="hero-in">
                     <p class="eyebrow"><span class="tri" aria-hidden="true"><i></i><i></i><i></i></span>Apartheid
                         Digital? · 2023 a 2025</p>
-                    <h1><span class="h1-kicker">Inclusão digital no Brasil:</span> quem consegue resolver serviços
-                        públicos <span class="hl">pela internet</span>?</h1>
+                    <h1><span class="h1-kicker">Inclusão digital no Brasil:</span> quem resolve serviços públicos <span
+                            class="hl">pela internet</span>?</h1>
                     <p class="hero-lead">
                         Ter internet não basta para ter inclusão digital. Com os microdados da TIC Domicílios, vemos
                         quem resolve documentos, saúde, educação e impostos pela internet, e quem ainda precisa ir a
@@ -875,8 +875,8 @@
                                     aria-hidden="true">PA</span>
                                 <h4>Pedro Rodrigues Almeida</h4>
                                 <p>Ciência de Dados — Fatec Rubens Lara</p>
-                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <svg
-                                        class="i" aria-hidden="true">
+                                <a href="https://www.linkedin.com/in/pedro-rdgs-almeida/?isSelfProfile=true"
+                                    target="_blank" rel="noopener">LinkedIn <svg class="i" aria-hidden="true">
                                         <use href="#i-ext" />
                                     </svg></a>
                             </div>
@@ -885,8 +885,8 @@
                                     aria-hidden="true">VS</span>
                                 <h4>Vitor Alexandre dos Santos Silva</h4>
                                 <p>Ciência de Dados — Fatec Rubens Lara</p>
-                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <svg
-                                        class="i" aria-hidden="true">
+                                <a href="https://www.linkedin.com/in/vitorrsilva/" target="_blank"
+                                    rel="noopener">LinkedIn <svg class="i" aria-hidden="true">
                                         <use href="#i-ext" />
                                     </svg></a>
                             </div>
@@ -895,8 +895,8 @@
                                     aria-hidden="true">EN</span>
                                 <h4>Eduardo Pedro Nogueira</h4>
                                 <p>Ciência de Dados — Fatec Rubens Lara</p>
-                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <svg
-                                        class="i" aria-hidden="true">
+                                <a href="https://www.linkedin.com/in/eduardo-nogueira-812588216/" target="_blank"
+                                    rel="noopener">LinkedIn <svg class="i" aria-hidden="true">
                                         <use href="#i-ext" />
                                     </svg></a>
                             </div>
@@ -906,7 +906,7 @@
                     <aside class="side-card reveal" style="--rd:.2s">
                         <div>
                             <h3>Orientação</h3>
-                            <p>[Nome do professor ou da professora]</p>
+                            <p>CLAUDIA MARIA SODERO SALLES</p>
                         </div>
                         <div>
                             <h3>Ferramentas usadas</h3>
@@ -943,7 +943,7 @@
                                             aria-hidden="true">
                                             <use href="#i-mail" />
                                         </svg></span><span><small>E-mail do
-                                            grupo</small>[e-mail do grupo]</span></a></li>
+                                            grupo</small>apartheid.digital@gmail.com</span></a></li>
                             <li><a href="https://github.com/RdgsPedro/apartheid-digital" target="_blank"
                                     rel="noopener"><span class="ico"><svg class="i" aria-hidden="true">
                                             <use href="#i-code" />
@@ -1047,13 +1047,13 @@
                     const open = navLinks.classList.toggle('is-open');
                     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
                 });
-                navLinks.addEventListener('click', (e) => {if (e.target.closest('a')) closeMenu();});
-                document.addEventListener('keydown', (e) => {if (e.key === 'Escape') closeMenu();});
+                navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
+                document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
                 /* Sombra no cabeçalho ao rolar */
                 const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
                 onScroll();
-                window.addEventListener('scroll', onScroll, {passive: true});
+                window.addEventListener('scroll', onScroll, { passive: true });
 
                 /* Grades de 100 pontos do achado principal */
                 document.querySelectorAll('.dots').forEach((grid) => {
@@ -1084,12 +1084,12 @@
                                 io.unobserve(entry.target);
                             }
                         });
-                    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+                    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
                     revealEls.forEach((el) => io.observe(el));
 
                     /* Destaca no menu a seção que está na tela */
                     const links = {};
-                    navLinks.querySelectorAll('a[href^="#"]').forEach((a) => {links[a.getAttribute('href').slice(1)] = a;});
+                    navLinks.querySelectorAll('a[href^="#"]').forEach((a) => { links[a.getAttribute('href').slice(1)] = a; });
                     const spy = new IntersectionObserver((entries) => {
                         entries.forEach((entry) => {
                             if (!entry.isIntersecting) return;
@@ -1097,7 +1097,7 @@
                             const link = links[entry.target.id];
                             if (link && !link.classList.contains('btn')) link.classList.add('is-active');
                         });
-                    }, {rootMargin: '-45% 0px -50% 0px'});
+                    }, { rootMargin: '-45% 0px -50% 0px' });
                     document.querySelectorAll('main section[id]').forEach((s) => spy.observe(s));
                 } else {
                     revealEls.forEach((el) => el.classList.add('is-visible'));
@@ -1115,9 +1115,9 @@
                         panels[j].hidden = !on;
                     });
                     if (focus) tabs[index].focus();
-                    tabs[index].scrollIntoView({block: 'nearest', inline: 'nearest'});
+                    tabs[index].scrollIntoView({ block: 'nearest', inline: 'nearest' });
                 };
-                panels.forEach((p, j) => {p.hidden = j !== 0;});
+                panels.forEach((p, j) => { p.hidden = j !== 0; });
                 tabs.forEach((tab, i) => {
                     tab.addEventListener('click', () => selectTab(i, false));
                     tab.addEventListener('keydown', (e) => {
@@ -1126,7 +1126,7 @@
                         if (e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
                         if (e.key === 'Home') next = 0;
                         if (e.key === 'End') next = tabs.length - 1;
-                        if (next !== null) {e.preventDefault(); selectTab(next, true);}
+                        if (next !== null) { e.preventDefault(); selectTab(next, true); }
                     });
                 });
 
@@ -1160,7 +1160,7 @@
                         } catch (err) {
                             label.textContent = 'Selecione o texto para copiar';
                         }
-                        setTimeout(() => {label.textContent = 'Copiar referência';}, 2200);
+                        setTimeout(() => { label.textContent = 'Copiar referência'; }, 2200);
                     });
                 });
             } catch (err) {
