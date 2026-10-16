@@ -68,10 +68,11 @@ inclusao-digital-brasil/
 └── assets/
     ├── favicon.png               ícone da aba do navegador
     ├── og-apartheid-digital.png  imagem que aparece ao compartilhar o link
+    ├── fonts/                    fonte Poppins (.woff2) e a licença dela
     └── figura-1 … figura-6       gráficos do Power BI, em .webp (em preparação)
 ```
 
-O site é HTML, CSS e JavaScript puros, sem framework nem etapa de build. A única dependência externa é a fonte Poppins, carregada do Google Fonts.
+O site é HTML, CSS e JavaScript puros, sem framework, sem etapa de build e sem dependências externas. A fonte Poppins (licença SIL Open Font License) fica hospedada em `assets/fonts/`, então o navegador não faz nenhum pedido a terceiros para carregar a página.
 
 ## Rodando o site localmente
 
@@ -92,7 +93,7 @@ O site é publicado com o GitHub Pages: em **Settings → Pages**, fonte *Deploy
 O site foi montado seguindo uma estratégia de SEO e *link building* para a disciplina de Marketing Digital:
 
 - **Palavra-chave principal:** "inclusão digital", com cauda longa como "exclusão digital no Brasil", "o que é inclusão digital", "apartheid digital" e "TIC Domicílios".
-- **Na página:** título com 58 caracteres, meta description com 134, um único H1 e H2 com palavras-chave, FAQ com 7 perguntas, links internos dentro dos textos, imagens com texto alternativo e carregamento preguiçoso, e conteúdo semântico acessível.
+- **Na página:** título com 58 caracteres, meta description com 134, um único H1 e H2 com palavras-chave, FAQ com 7 perguntas, links internos dentro dos textos, imagens com texto alternativo e carregamento preguiçoso, fonte hospedada no próprio site e conteúdo semântico acessível.
 - **Para os buscadores:** `canonical`, Open Graph e Twitter Card, dados estruturados em JSON-LD (`WebSite`, `WebPage`, `Dataset`, `FAQPage` e `Person`) e `sitemap.xml`.
 - **Antes de lançar:** o `<head>` traz `<meta name="robots" content="noindex, nofollow">`. Remova essa linha no lançamento e envie o `sitemap.xml` no Google Search Console.
 
