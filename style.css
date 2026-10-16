@@ -75,6 +75,17 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Links dentro de textos (rede de links internos) */
+.in-link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.in-link:hover {
+    text-decoration-thickness: 2px;
+}
+
 :focus-visible {
     outline: 3px solid var(--orange);
     outline-offset: 3px;
@@ -268,16 +279,6 @@ h4 {
 
 .btn-blue:hover {
     background: #174A92;
-    transform: translateY(-2px);
-}
-
-.btn-light {
-    background: #fff;
-    color: var(--ink);
-}
-
-.btn-light:hover {
-    background: var(--orange-50);
     transform: translateY(-2px);
 }
 
@@ -1884,158 +1885,6 @@ figcaption strong {
     font-size: 0.8rem;
 }
 
-.side-card .btns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* ==========================================================================
-       10. CONTATO
-       ========================================================================== */
-.contact {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 56px;
-    align-items: center;
-    padding: 64px;
-    border-radius: 32px;
-    color: #fff;
-    background: linear-gradient(125deg, #AE3A0C 0%, #C9491A 45%, #EB6834 100%);
-}
-
-.contact::before,
-.contact::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    border-radius: 50%;
-}
-
-.contact::before {
-    width: 460px;
-    height: 460px;
-    right: -150px;
-    top: -190px;
-    border: 70px solid rgba(255, 255, 255, 0.07);
-}
-
-.contact::after {
-    width: 260px;
-    height: 260px;
-    left: -110px;
-    bottom: -130px;
-    background: rgba(255, 255, 255, 0.06);
-}
-
-.contact .kicker {
-    color: #FFE1D1;
-}
-
-.contact .kicker::before {
-    background: #fff;
-}
-
-.contact h2 {
-    color: #fff;
-}
-
-.contact .lead {
-    color: rgba(255, 255, 255, 0.94);
-}
-
-.contact-links {
-    list-style: none;
-    display: grid;
-    gap: 14px;
-    margin-top: 32px;
-}
-
-.contact-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    color: #fff;
-    font-weight: 500;
-    font-size: 0.94rem;
-    word-break: break-word;
-}
-
-.contact-links small {
-    display: block;
-    font-size: 0.72rem;
-    font-weight: 500;
-    color: #FFE1D1;
-}
-
-.contact-links .ico {
-    flex: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 14px;
-    display: grid;
-    place-items: center;
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.form {
-    background: #fff;
-    color: var(--ink);
-    border-radius: 24px;
-    padding: 32px;
-    box-shadow: 0 30px 60px -30px rgba(80, 20, 0, 0.55);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-}
-
-.field {
-    display: grid;
-    gap: 6px;
-    margin-bottom: 14px;
-}
-
-.field label {
-    font-size: 0.82rem;
-    font-weight: 600;
-}
-
-.field input,
-.field select,
-.field textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid var(--line);
-    border-radius: 12px;
-    background: #FDFBFA;
-    font: 400 0.92rem/1.5 var(--font);
-    color: var(--ink);
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.field textarea {
-    resize: vertical;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-    outline: none;
-    border-color: var(--orange);
-    box-shadow: 0 0 0 4px rgba(235, 104, 52, 0.16);
-}
-
-.form .btn {
-    width: 100%;
-    margin-top: 4px;
-}
-
 /* ==========================================================================
        11. RODAPÉ
        ========================================================================== */
@@ -2221,8 +2070,7 @@ figcaption strong {
     .measure,
     .panel-grid,
     .faq-grid,
-    .about-grid,
-    .contact {
+    .about-grid {
         grid-template-columns: minmax(0, 1fr);
     }
 
@@ -2250,10 +2098,6 @@ figcaption strong {
         position: static;
     }
 
-    .contact {
-        gap: 40px;
-        padding: 48px;
-    }
 }
 
 @media (max-width: 680px) {
@@ -2411,19 +2255,6 @@ figcaption strong {
         font-size: 1.05rem;
     }
 
-    .contact {
-        padding: 36px 20px 20px;
-        border-radius: 26px;
-    }
-
-    .form {
-        padding: 22px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
