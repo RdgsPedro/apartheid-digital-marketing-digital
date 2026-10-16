@@ -61,9 +61,11 @@ Ferramentas: Python, pandas, NumPy, Svy, Power BI e GitHub.
 
 ```
 inclusao-digital-brasil/
-├── index.html          página única: conteúdo, dados estruturados (JSON-LD) e scripts
-├── style.css           estilos do site
-├── sitemap.xml         mapa do site para os buscadores
+├── index.html                  página única: conteúdo, dados estruturados (JSON-LD) e scripts
+├── politica-de-privacidade.html  política de privacidade (LGPD)
+├── style.css                   estilos do site
+├── consent.js                  aviso de cookies e Google Analytics (só após o aceite)
+├── sitemap.xml                 mapa do site para os buscadores
 ├── README.md
 └── assets/
     ├── favicon.png               ícone da aba do navegador
@@ -72,7 +74,7 @@ inclusao-digital-brasil/
     └── figura-1 … figura-6       gráficos do Power BI, em .webp (em preparação)
 ```
 
-O site é HTML, CSS e JavaScript puros, sem framework, sem etapa de build e sem dependências externas. A fonte Poppins (licença SIL Open Font License) fica hospedada em `assets/fonts/`, então o navegador não faz nenhum pedido a terceiros para carregar a página.
+O site é HTML, CSS e JavaScript puros, sem framework, sem etapa de build e sem dependências externas. A fonte Poppins (licença SIL Open Font License) fica hospedada em `assets/fonts/`, então o navegador não faz nenhum pedido a terceiros para carregar a página. A única exceção é o Google Analytics, que só é carregado depois que a pessoa aceita o aviso de cookies (veja *Privacidade e Analytics*).
 
 ## Rodando o site localmente
 
@@ -96,6 +98,17 @@ O site foi montado seguindo uma estratégia de SEO e *link building* para a disc
 - **Na página:** título com 58 caracteres, meta description com 134, um único H1 e H2 com palavras-chave, FAQ com 7 perguntas, links internos dentro dos textos, imagens com texto alternativo e carregamento preguiçoso, fonte hospedada no próprio site e conteúdo semântico acessível.
 - **Para os buscadores:** `canonical`, Open Graph e Twitter Card, dados estruturados em JSON-LD (`WebSite`, `WebPage`, `Dataset`, `FAQPage` e `Person`) e `sitemap.xml`.
 - **Antes de lançar:** o `<head>` traz `<meta name="robots" content="noindex, nofollow">`. Remova essa linha no lançamento e envie o `sitemap.xml` no Google Search Console.
+
+## Privacidade e Analytics
+
+A audiência é medida com o **Google Analytics 4**, em conformidade com a LGPD:
+
+- O Google **só é chamado depois que a pessoa clica em "Aceitar"** no aviso de cookies. Sem escolha, ou com "Recusar", o site não abre nenhuma conexão com o Google. Os dois botões têm o mesmo peso visual.
+- A escolha fica no navegador (`localStorage`, chave `ad_consent`), vale por 12 meses e pode ser mudada em **Preferências de cookies**, no rodapé. Ao recusar, os cookies `_ga*` são apagados.
+- O Google Signals e a personalização de anúncios ficam desligados, e os cookies duram até 12 meses.
+- Tudo está em `consent.js`. Para trocar a propriedade do Analytics, mude só a constante `GA_ID` no topo do arquivo.
+- Eventos medidos (só com aceite): `clique_microdados`, `clique_github`, `clique_linkedin`, `clique_email`, `clique_externo`, `copiar_referencia`, `abrir_aba`, `abrir_figura`, `faq_aberta` e `ver_secao`, além dos eventos automáticos do GA4 (visualização de página, rolagem e cliques de saída).
+- A página [`politica-de-privacidade.html`](politica-de-privacidade.html) explica o que é coletado, a base legal e os direitos. Ela usa `noindex` de propósito, mesmo depois do lançamento.
 
 ## Equipe
 

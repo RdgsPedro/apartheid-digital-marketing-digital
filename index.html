@@ -40,16 +40,7 @@
     <link rel="preload" href="assets/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Google Analytics (GA4) - Substitua G-XXXXXXXXXX pelo seu ID de medição -->
-    <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
+    <!-- Google Analytics (GA4): carregado por consent.js, somente depois que a pessoa clica em "Aceitar" no aviso de cookies. ID: G-TZY4QKCGTE -->
 
     <!-- Dados estruturados (JSON-LD) -->
     <script type="application/ld+json">
@@ -1155,6 +1146,8 @@
                     <li><a href="#dados-e-fontes">Dados e fontes</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="mailto:apartheid.digital@gmail.com">Contato</a></li>
+                    <li><a href="politica-de-privacidade.html">Privacidade</a></li>
+                    <li><button type="button" data-cookie-open>Preferências de cookies</button></li>
                 </ul>
             </div>
             <div class="footer-bottom">
@@ -1312,6 +1305,7 @@
             }
         })();
     </script>
+    <script src="consent.js" defer></script>
 </body>
 
 </html>
